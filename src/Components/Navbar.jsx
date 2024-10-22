@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { FaSearch } from "react-icons/fa"; // Search icon from react-icons
+import { FaSearch, FaPlane } from "react-icons/fa"; // Search icon from react-icons
 import { items } from "./CountriesData"; // Import the data for your items
 import { useNavigate } from "react-router-dom";
 const Navbar = () => {
@@ -79,6 +79,13 @@ const Navbar = () => {
               />
             </div>
           )}
+          {/* Airplane Icon with Smooth Animation */}
+          <div className="absolute left-1/2 transform -translate-x-1/2 hidden lg:block">
+            <div className="animate-plane relative">
+              <FaPlane className="text-white text-2xl" />
+              <div className="dotted-line"></div> {/* Dotted line element */}
+            </div>
+          </div>
         </div>
 
         {/* Mobile view: Search bar (when sticky) */}
